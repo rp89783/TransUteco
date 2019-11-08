@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             Title="Transportes Universidad UTECO"
+             x:Class="TransUteco.Views.DetailPrincipalPage"
+             BackgroundImageSource="FondoLogin">
+    <ContentPage.Content>
+        <ScrollView>
+           
+            
+                <StackLayout >
+                <Label Text="Elige tu transporte" FontAttributes="Bold"  FontSize="20" Margin="10" TextColor="White"/>
+                <Grid Margin="0" >
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                    </Grid.RowDefinitions>
+                
+               
+                        <Grid.ColumnDefinitions >
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+
+
+
+                    <Button Text="ASOEBA" BackgroundColor="Green" TextColor="White" FontSize="20" Image="T" ContentLayout="Top,0"   Grid.Column="0" Grid.Row="0"  />
+                    <Button Text="ASOEBA" BackgroundColor="Accent" TextColor="White" FontSize="20" Image="T" ContentLayout="Top,0"   Grid.Column="1"  Grid.Row="0"/>
+
+                    <Button Text="ASOEBA" BackgroundColor="Orange" TextColor="White" FontSize="20" Image="T" ContentLayout="Top,0"  Grid.Column="0" Grid.Row="1"/>
+                    <Button Text="ASOEBA" BackgroundColor="Aqua" TextColor="White" FontSize="20" Image="T" ContentLayout="Top,0"  Grid.Column="1" Grid.Row="1"/>
+
+                    <Button Text="ASOEBA" BackgroundColor="Purple" TextColor="White" FontSize="20" Image="T" ContentLayout="Top,0"  Grid.Column="0" Grid.Row="2"/>
+                    <Button Text="ASOEBA" BackgroundColor="Gray" TextColor="White" FontSize="20" Image="T" ContentLayout="Top,0"  Grid.Column="1" Grid.Row="2"/>
+
+                    <Button Text="ASOEBA" BackgroundColor="Firebrick" TextColor="White" FontSize="20" Image="T" ContentLayout="Top,0"  Grid.Column="0" Grid.Row="3"/>
+                    <Button Text="ASOEBA" BackgroundColor="DarkBlue" TextColor="White" FontSize="20" Image="T" ContentLayout="Top,0"  Grid.Column="1" Grid.Row="3"/>
+                </Grid>
+               
+            </StackLayout>
+           
+
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
