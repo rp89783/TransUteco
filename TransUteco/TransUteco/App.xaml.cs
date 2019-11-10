@@ -10,7 +10,7 @@ namespace TransUteco
         {
             InitializeComponent();
 
-            MainPage = new Views.MasterPage();
+            MainPage = new Views.LoginPage();
         }
 
         protected override void OnStart()

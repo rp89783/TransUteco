@@ -15,6 +15,70 @@
                 </StackLayout>
 
             </ControlTemplate>
+            <Style x:Key="Texbox" TargetType="Entry">
+                <Setter Property="FontSize"     Value = "18"   />
+                <Setter Property="PlaceholderColor"     Value = "Black"   />
+               
+            </Style>
+            <Style x:Key="ButtonRosa" TargetType="Button">
+                <Setter Property="FontSize"     Value = "12"   />
+                <Setter Property="TextColor" Value="White"></Setter>
+                <Setter Property="BackgroundColor" Value="Accent"></Setter>
+                <Setter Property="HorizontalOptions" Value="Center"></Setter>
+            </Style>
+            <Style x:Key="Button" TargetType="Button">
+                <Setter Property="FontSize"     Value = "18"   />
+                <Setter Property="FontAttributes"     Value = "Bold"   />
+                <Setter Property="CornerRadius"     Value = "10"   />
+                <Setter Property="HeightRequest"     Value = "50"   />
+                <Setter Property="WidthRequest"     Value = "500"   />
+                <Setter Property="TextColor" Value="#319FCD"></Setter>
+                <Setter Property="BackgroundColor" Value="White"></Setter>
+                <Setter Property="HorizontalOptions" Value="Center"></Setter>
+            </Style>
+            <Style x:Key="ButtonTra" TargetType="Button">
+                <Setter Property="FontSize"     Value = "18"   />
+                <Setter Property="CornerRadius"     Value = "10"   />
+                <Setter Property="HeightRequest"     Value = "46"   />
+                <Setter Property="BorderColor"     Value = "White"   />
+                <Setter Property="BorderWidth"     Value = "2"   />
+                <Setter Property="TextColor" Value="White"></Setter>
+                <Setter Property="WidthRequest"     Value = "500"   />
+                <Setter Property="BackgroundColor" Value="Transparent"></Setter>
+                <Setter Property="HorizontalOptions" Value="Center"></Setter>
+            </Style>
+            
+            <Style x:Key="FrameLogin" TargetType="Frame">
+
+               
+                <Setter Property="CornerRadius" Value="10"></Setter>
+                <Setter Property="Margin" Value="0,10,0,0"></Setter>
+                <Setter Property="BorderColor" Value="White"></Setter>
+                <Setter Property="Padding" Value="8"></Setter>
+
+            </Style>
+
+           
+            <Style x:Key="txtRegistrar" TargetType="Entry">
+                <Setter Property="FontSize" Value="18"></Setter>
+                <Setter Property="PlaceholderColor" Value="Black"></Setter>
+                <Setter Property="TextColor" Value="Black"></Setter>
+                
+
+            </Style>
+
+            <Style x:Key="Stack" TargetType="StackLayout">
+                
+                <Setter Property="Margin" Value="0,10,0,0"></Setter>
+              
+                <Setter Property="Padding" Value="8"></Setter>
+                <Setter Property="BackgroundColor" Value="White"></Setter>
+                
+            </Style>
+            <Style TargetType="Label">
+                <Setter Property="FontSize" Value="18"></Setter>
+               
+            </Style>
         </ResourceDictionary>
     </Application.Resources>
 </Application>

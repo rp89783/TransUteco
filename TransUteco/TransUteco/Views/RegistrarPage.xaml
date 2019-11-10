@@ -19,19 +19,23 @@
 
 
 
-                    <StackLayout Grid.Row="0"  BackgroundColor="White" Padding="20" >
+                    <StackLayout Grid.Row="0" Style="{StaticResource Key=Stack} "  Padding="20" >
                         <Label Text="Crea tu cuenta aqui." TextColor="#0088C1" HorizontalOptions="Center" FontSize="18" />
-                        <Label Text=""  FontSize="18"/>
-                        <Entry Placeholder="Nombre Completo" FontSize="18" PlaceholderColor="Black"  TextColor="White" />
-                        <Label Text="" TextColor="Black" FontSize="18" />
-                        <Entry Placeholder="Nombre de usuario" FontSize="18" PlaceholderColor="Black"  TextColor="White" />
-                        <Label Text="" TextColor="Black" FontSize="18"/>
-                        <Entry Placeholder="E-mail" FontSize="18" PlaceholderColor="Black"  TextColor="White" />
-                        <Label Text="" TextColor="Black" FontSize="18" />
-                        <Entry Placeholder="Contraseña" FontSize="18" PlaceholderColor="Black"  TextColor="White" />
+                      
+                        <Label Text=""   x:Name="lblNombre"/>
+                        <Entry Placeholder="Nombre Completo" Style="{StaticResource Key=txtRegistrar} "  x:Name="txtnombre"  TextChanged="txtnombre_TextChanged" />
+                       
+                        <Label Text=""  x:Name="lblNombreUser" />
+                        <Entry Placeholder="Nombre de usuario"  Style="{StaticResource Key=txtRegistrar} "   x:Name="txtNombreUsuario" TextChanged="txtNombreUsuario_TextChanged" />
+                       
+                        <Label Text="" x:Name="lblEmail" />
+                        <Entry Placeholder="E-mail"  Style="{StaticResource Key=txtRegistrar} " x:Name="txtEmail" TextChanged="txtEmail_TextChanged"/>
+                       
+                        <Label Text="" x:Name="lblContrasena" />
+                        <Entry Placeholder="Contraseña"  Style="{StaticResource Key=txtRegistrar} " IsPassword="True" x:Name="txtContrasena" TextChanged="txtContrasena_TextChanged" />
 
-                        <Label Text=""  TextColor="Black" FontSize="18" />
-                        <Entry Placeholder="Confirmar Contraseña" FontSize="18" PlaceholderColor="Black" TextColor="White" IsPassword="True" />
+                        <Label Text="" x:Name="lblConfirmarContrasena" />
+                        <Entry Placeholder="Confirmar Contraseña"  Style="{StaticResource Key=txtRegistrar} "   IsPassword="True" x:Name="txtConfirmarcontrasena" TextChanged="txtConfirmarcontrasena_TextChanged" />
 
 
 

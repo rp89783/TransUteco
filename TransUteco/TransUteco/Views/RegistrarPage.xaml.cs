@@ -21,5 +21,55 @@ namespace TransUteco.Views
         {
             Application.Current.MainPage = new LoginPage();
         }
+
+        private void txtnombre_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (txtnombre.Text != "")
+            {
+                lblNombre.Text = txtnombre.Placeholder;
+            }
+            else
+                lblNombre.Text = "";
+        }
+
+        private void txtNombreUsuario_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (txtNombreUsuario.Text != "")
+            {
+                lblNombreUser.Text = txtNombreUsuario.Placeholder;
+            }
+            else
+                lblNombreUser.Text = "";
+        }
+
+        private void txtEmail_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (txtEmail.Text != "")
+            {
+                lblEmail.Text = txtEmail.Placeholder;
+            }
+            else
+                lblEmail.Text = "";
+        }
+
+        private void txtContrasena_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (txtContrasena.Text != "")
+            {
+                lblContrasena.Text = txtContrasena.Placeholder;
+            }
+            else
+                lblContrasena.Text = "";
+        }
+
+        private void txtConfirmarcontrasena_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (txtConfirmarcontrasena.Text != "")
+            {
+                lblConfirmarContrasena.Text = txtConfirmarcontrasena.Placeholder;
+            }
+            else
+                lblConfirmarContrasena.Text = "";
+        }
     }
 }

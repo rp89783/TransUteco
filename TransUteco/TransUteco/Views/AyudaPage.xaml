@@ -4,12 +4,41 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="TransUteco.Views.AyudaPage">
+             x:Class="TransUteco.Views.AyudaPage"
+             IconImageSource="Configuracion.png"
+             Title="Ayuda">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to ayuda.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <ScrollView BackgroundColor="White">
+            <ContentView ControlTemplate="{StaticResource Encabezado}" HorizontalOptions="FillAndExpand" Padding="20,30,20,0">
+
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="2"/>
+                        <RowDefinition Height="*"/>
+
+                    </Grid.RowDefinitions>
+                    
+                            <StackLayout Grid.Row="1" Padding="3"  BackgroundColor="White" >
+                                <Label TextColor="Black" Text="Hola. Gracias por preferirnos."/>
+                                <Label TextColor="Black" Text="Si necesitas alguna ayuda o quieres realizar algun aporte, por favor ESCRIBENOS."/>
+
+                                <Frame  BackgroundColor="Aqua" CornerRadius="10" Margin="10">
+                                    <StackLayout>
+                                        <Label Text="Mensaje" TextColor="Black" FontSize="Large" ></Label>
+
+                                        <Editor Placeholder="Que deceas?" HeightRequest="200"  BackgroundColor="White"/>
+                                        <Button Text="Enviar Mensaje" FontSize="18" HeightRequest="50" TextColor="White" BackgroundColor="#0088C1 " CornerRadius="10" />
+
+                                    </StackLayout>
+
+
+
+                                </Frame>
+                            </StackLayout>
+
+                </Grid>
+            </ContentView>
+        </ScrollView>
+
     </ContentPage.Content>
 </ContentPage>

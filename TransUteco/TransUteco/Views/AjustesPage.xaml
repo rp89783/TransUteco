@@ -6,10 +6,26 @@
              mc:Ignorable="d"
              x:Class="TransUteco.Views.AjustesPage">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Ajustes"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <ScrollView>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="*"/>
+                    
+                </Grid.RowDefinitions>
+                <Frame Grid.Row="0" BackgroundColor="#319FCD">
+                    <StackLayout Orientation="Horizontal">
+                        <Image Source="Configuracion.png" WidthRequest="100"/>
+                        <Label Text="Ajuste" FontSize="25" TextColor="White" Margin="0,10,0,0"/>
+                    </StackLayout>
+
+                </Frame>
+                <StackLayout Grid.Row="1" >
+                    
+                </StackLayout>
+                
+            </Grid>
+            
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>
