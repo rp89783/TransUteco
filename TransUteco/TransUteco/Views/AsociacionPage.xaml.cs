@@ -10,16 +10,11 @@ using Xamarin.Forms.Xaml;
 namespace TransUteco.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class MasterPage : ContentPage
+    public partial class AsociacionPage : ContentPage
     {
-        public MasterPage()
+        public AsociacionPage()
         {
             InitializeComponent();
-        }
-
-        private void btnCerrarSesion_Clicked(object sender, EventArgs e)
-        {
-            Application.Current.MainPage = new LoginPage();
         }
     }
 }

@@ -29,29 +29,31 @@
             <Frame Grid.Row="1" BackgroundColor="White">
                 <StackLayout >
                     <ListView  x:Name="listView" x:FieldModifier="public" >
+
                         <ListView.ItemsSource>
                             <x:Array Type="{x:Type local:MasterPageItem}">
                                 <local:MasterPageItem  Title="Transportes" Icon="ic_launcher.png" TargetType="{x:Type Views:DetailPrincipalPage}" />
                                 <local:MasterPageItem Title="Ajustes"  Icon="icon.png" TargetType="{x:Type Views:AjustesPage}" />
-                                <local:MasterPageItem Title="Ayuda" TargetType="{x:Type Views:AyudaPage}" />
-                                <local:MasterPageItem Title="Cerrar Sesion" TargetType="{x:Type Views:LoginPage}" />
+                                <local:MasterPageItem Title="Ayuda" Icon="icon.png" TargetType="{x:Type Views:AyudaPage}" />
+                                <!--<local:MasterPageItem Title="Cerrar Sesion" Icon="icon.png" TargetType="{x:Type Views:LoginPage}" />-->
                             </x:Array>
                         </ListView.ItemsSource>
                         <ListView.ItemTemplate>
                             <DataTemplate>
                                 <ViewCell>
-                                    <Grid Padding="5,10">
-                                        <Grid.ColumnDefinitions>
-                                            <ColumnDefinition Width="30"/>
-                                            <ColumnDefinition Width="*"/>
-
-                                        </Grid.ColumnDefinitions>
-                                        <Label Grid.Column="1" Text="{Binding Title}" />
-                                    </Grid>
+                                    
+                                        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand"  >
+                                            <Image Grid.Column="0" Source="{Binding Icon}" WidthRequest="30" HeightRequest="30"/>
+                                            <Label  Grid.Column="1"  Text="{Binding Title}" VerticalOptions="EndAndExpand" />
+                                            
+                                        </StackLayout>
+                                        
+                                  
                                 </ViewCell>
                             </DataTemplate>
                         </ListView.ItemTemplate>
                     </ListView>
+                    <Button Text="Cerrar Sesion" Image="Exit" x:Name="btnCerrarSesion" Clicked="btnCerrarSesion_Clicked" ContentLayout="Left,0"/>
                 </StackLayout>
                 
             </Frame>

@@ -5,7 +5,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="TransUteco.Views.AyudaPage"
-             IconImageSource="Configuracion.png"
+             IconImageSource="Help"
              Title="Ayuda">
     <ContentPage.Content>
         <ScrollView BackgroundColor="White">
@@ -30,12 +30,8 @@
                                         <Button Text="Enviar Mensaje" FontSize="18" HeightRequest="50" TextColor="White" BackgroundColor="#0088C1 " CornerRadius="10" />
 
                                     </StackLayout>
-
-
-
                                 </Frame>
                             </StackLayout>
-
                 </Grid>
             </ContentView>
         </ScrollView>

@@ -6,22 +6,25 @@
              mc:Ignorable="d"
              Title="Transportes Universidad UTECO"
              x:Class="TransUteco.Views.DetailPrincipalPage"
-             BackgroundImageSource="FondoLogin">
+             BackgroundImageSource="FONDO2.PNG">
     <ContentPage.Content>
         <ScrollView>
-           
-            
+
+            <ContentView ControlTemplate="{StaticResource Encabezado}" HorizontalOptions="FillAndExpand" Padding="20,30,20,0">
                 <StackLayout >
-                <Label Text="Elige tu transporte" FontAttributes="Bold"  FontSize="20" Margin="10" TextColor="White"/>
-                <Grid Margin="0" >
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="auto"/>
-                        <RowDefinition Height="auto"/>
-                        <RowDefinition Height="auto"/>
-                        <RowDefinition Height="auto"/>
-                    </Grid.RowDefinitions>
-                
-               
+
+
+                    <Label Text="Elige tu transporte" FontAttributes="Bold"  FontSize="20" Margin="10" TextColor="White"/>
+
+                    <Grid Margin="0,20,0,0" >
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                        </Grid.RowDefinitions>
+
+
                         <Grid.ColumnDefinitions >
                             <ColumnDefinition Width="*"/>
                             <ColumnDefinition Width="*"/>
@@ -30,22 +33,23 @@
 
 
 
-                    <Button Text="ASOEBA" BackgroundColor="Green" TextColor="White" FontSize="20" Image="T" ContentLayout="Top,0"   Grid.Column="0" Grid.Row="0"  />
-                    <Button Text="ASOEBA" BackgroundColor="Accent" TextColor="White" FontSize="20" Image="T" ContentLayout="Top,0"   Grid.Column="1"  Grid.Row="0"/>
+                        <Button Text="ASOEBA" BackgroundColor="Green" Style="{StaticResource ButtonPagePrincipal}"  Image="T"   Grid.Column="0" Grid.Row="0" x:Name="btnAsoeba" Clicked="btnAsoeba_Clicked" />
+                        <Button Text="ASOECU" BackgroundColor="Accent" Style="{StaticResource ButtonPagePrincipal}" Image="B1"   Grid.Column="1"  Grid.Row="0"/>
 
-                    <Button Text="ASOEBA" BackgroundColor="Orange" TextColor="White" FontSize="20" Image="T" ContentLayout="Top,0"  Grid.Column="0" Grid.Row="1"/>
-                    <Button Text="ASOEBA" BackgroundColor="Aqua" TextColor="White" FontSize="20" Image="T" ContentLayout="Top,0"  Grid.Column="1" Grid.Row="1"/>
+                        <Button Text="ASEUSIP" BackgroundColor="Orange" Style="{StaticResource ButtonPagePrincipal}" Image="B2"  Grid.Column="0" Grid.Row="1"/>
+                        <Button Text="ASEUZA" BackgroundColor="Aqua" Style="{StaticResource ButtonPagePrincipal}" Image="B3"  Grid.Column="1" Grid.Row="1"/>
 
-                    <Button Text="ASOEBA" BackgroundColor="Purple" TextColor="White" FontSize="20" Image="T" ContentLayout="Top,0"  Grid.Column="0" Grid.Row="2"/>
-                    <Button Text="ASOEBA" BackgroundColor="Gray" TextColor="White" FontSize="20" Image="T" ContentLayout="Top,0"  Grid.Column="1" Grid.Row="2"/>
+                        <Button Text="ASEUPIVI" BackgroundColor="Purple" Style="{StaticResource ButtonPagePrincipal}" Image="B4"   Grid.Column="0" Grid.Row="2"/>
+                        <Button Text="???" BackgroundColor="Gray" Style="{StaticResource ButtonPagePrincipal}" Image="B5"  Grid.Column="1" Grid.Row="2"/>
 
-                    <Button Text="ASOEBA" BackgroundColor="Firebrick" TextColor="White" FontSize="20" Image="T" ContentLayout="Top,0"  Grid.Column="0" Grid.Row="3"/>
-                    <Button Text="ASOEBA" BackgroundColor="DarkBlue" TextColor="White" FontSize="20" Image="T" ContentLayout="Top,0"  Grid.Column="1" Grid.Row="3"/>
-                </Grid>
-               
-            </StackLayout>
-           
+                        <Button Text="???" BackgroundColor="Firebrick" Style="{StaticResource ButtonPagePrincipal}" Image="T"  Grid.Column="0" Grid.Row="3"/>
+                        <Button Text="???" BackgroundColor="DarkBlue" Style="{StaticResource ButtonPagePrincipal}" Image="T"   Grid.Column="1" Grid.Row="3"/>
+                    </Grid>
 
+                </StackLayout>
+
+            </ContentView>
         </ScrollView>
+       
     </ContentPage.Content>
 </ContentPage>

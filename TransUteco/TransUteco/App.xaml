@@ -79,6 +79,14 @@
                 <Setter Property="FontSize" Value="18"></Setter>
                
             </Style>
+
+            <Style x:Key="ButtonPagePrincipal" TargetType="Button">
+                <Setter Property="TextColor" Value="White"></Setter>
+                <Setter Property="FontSize" Value="20"></Setter>
+                <Setter Property="ContentLayout" Value="Top,0"></Setter>
+                <Setter Property="CornerRadius" Value="10"></Setter>
+
+            </Style>
         </ResourceDictionary>
     </Application.Resources>
 </Application>

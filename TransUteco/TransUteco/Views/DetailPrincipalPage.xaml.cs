@@ -16,6 +16,10 @@ namespace TransUteco.Views
         {
             InitializeComponent();
         }
-        
+
+        private async void btnAsoeba_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new AsociacionPage());
+        }
     }
 }
