@@ -4,7 +4,8 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="TransUteco.Views.AsociacionPage">
+             x:Class="TransUteco.Views.AsociacionPage"
+             xmlns:local="clr-namespace:TransUteco.Clases">
     <ContentPage.Content>
         <ScrollView>
             <StackLayout>
@@ -14,7 +15,21 @@
                 <Image Source="TP.png" WidthRequest="100" HorizontalOptions="Center"/>
 
                 <Label Text="Rutas de hoy"/>
-                
+                <ListView x:Name="listRutas">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="Start">
+                                    <Label Text="{Binding IdRuta}"/>
+                                    <Label Text="{Binding Ruta}"/>
+                                    <Label Text="{Binding Chofer}"/>
+                                    <Label Text="{Binding Hora}"/>
+                                  
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>
