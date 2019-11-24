@@ -10,13 +10,13 @@
     <ContentPage.Content>
         <ScrollView>
 
-            <ContentView ControlTemplate="{StaticResource Encabezado}" HorizontalOptions="FillAndExpand" Padding="20,30,20,0">
+            <ContentView ControlTemplate="{StaticResource Encabezado}" HorizontalOptions="FillAndExpand" Padding="0,30,0,0">
                 <StackLayout >
 
 
                     <Label Text="Elige tu transporte" FontAttributes="Bold"  FontSize="20" Margin="10" TextColor="White"/>
-
-                    <Grid Margin="0,20,0,0" >
+                    
+                    <Grid Margin="0,20,0,0" BackgroundColor="White" >
                         <Grid.RowDefinitions>
                             <RowDefinition Height="auto"/>
                             <RowDefinition Height="auto"/>

@@ -1,4 +1,5 @@
 ﻿using System;
+using TransUteco.Views;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -10,7 +11,8 @@ namespace TransUteco
         {
             InitializeComponent();
 
-            MainPage = new Views.LoginPage();
+            MainPage = new LoginPage();
+            //MainPage = new Views.LoginPage();
         }
 
         protected override void OnStart()
