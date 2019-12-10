@@ -2,8 +2,11 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Input;
 using TransUteco.Clases;
+using TransUteco.Services;
+using TransUteco.Views;
 using Xamarin.Forms;
 
 namespace TransUteco.ViewModel
@@ -45,33 +48,68 @@ namespace TransUteco.ViewModel
                 }
             }
 
-            private void SetProperty(ref string email, string value, string v)
-            {
-                throw new NotImplementedException();
-            }
 
-            
-        
-        public ICommand OnLogin { get; set; }
-        
+
+
+            public ICommand OnLogin { get; set; }
+            public ICommand OnRegistar { get; set; }
+            WebServices webService;
+
             public LoginViewModel()
             {
-                OnLogin = new Command(Login);
-             }
-
-            protected  void Login()
-            {
-
-                if (email != "admin" && clave != "123")
-                {
-                    Application.Current.MainPage.DisplayAlert("error", "credenciales errornesas", "Ok");
-                    return;
-                }
-                Application.Current.MainPage.DisplayAlert("Bienvenido", "Hola"+email, "Ok");
+                OnLogin = new Command(async () => await Login());
+                OnRegistar = new Command(Registar);
+                webService = new WebServices();
 
             }
 
+            private async Task Login()
+            {
+                if (string.IsNullOrEmpty(Email) || string.IsNullOrEmpty(Clave))
+                {
+                    await Application.Current.MainPage.DisplayAlert("Error", "Campos necesario", "Ok");
+                    return;
+                }
 
+                var response = await webService.Login(new LoginRequest()
+                {
+                    email = Email,
+                    password = clave
+                });
+
+                if (response == null)
+                {
+                    await Application.Current.MainPage.DisplayAlert("Error", "Ocurrio un error durante el login", "Ok");
+                    return;
+                }
+
+                await Application.Current.MainPage
+                .Navigation
+                .PushModalAsync(new NavigationPage(new MainPage()));
+                
+                //Application.Current.MainPage = new MainPage();
+
+
+                    
+
+                    //Application.Current.MainPage.Navigation.PushAsync(new NavigationPage(new MainPage()));
+                
+
+
+            }
+
+            private void Registar()
+            {
+                
+                 
+
+                        Application.Current.MainPage = new RegistrarPage();
+
+
+                 
+
+
+            }
         }
     }
 }

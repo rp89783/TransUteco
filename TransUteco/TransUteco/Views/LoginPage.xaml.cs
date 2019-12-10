@@ -26,13 +26,13 @@ namespace TransUteco.Views
        
         private void btnRegistar_Clicked(object sender, EventArgs e)
         {
-            Application.Current.MainPage = new RegistrarPage();
+           // Application.Current.MainPage = new RegistrarPage();
 
         }
 
         private void btnAcceder_Clicked(object sender, EventArgs e)
         {
-            Application.Current.MainPage = new MainPage();
+         //   Application.Current.MainPage = new MainPage();
         }
     }
 }

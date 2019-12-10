@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using TransUteco.ViewModel;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -15,6 +15,7 @@ namespace TransUteco.Views
         public RegistrarPage()
         {
             InitializeComponent();
+            BindingContext = new clsRegistrarVieModel();
         }
 
         private void btnLogin_Clicked(object sender, EventArgs e)
@@ -34,12 +35,12 @@ namespace TransUteco.Views
 
         private void txtNombreUsuario_TextChanged(object sender, TextChangedEventArgs e)
         {
-            if (txtNombreUsuario.Text != "")
-            {
-                lblNombreUser.Text = txtNombreUsuario.Placeholder;
-            }
-            else
-                lblNombreUser.Text = "";
+            //if (txtNombreUsuario.Text != "")
+            //{
+            //    lblNombreUser.Text = txtNombreUsuario.Placeholder;
+            //}
+            //else
+            //    lblNombreUser.Text = "";
         }
 
         private void txtEmail_TextChanged(object sender, TextChangedEventArgs e)
@@ -70,6 +71,16 @@ namespace TransUteco.Views
             }
             else
                 lblConfirmarContrasena.Text = "";
+        }
+
+        private void Picker_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (Pikersexo.Title != "Elija su sexo")
+            {
+                lblSexo.Text = Pikersexo.Title;
+            }
+            else
+                lblSexo.Text = "";
         }
     }
 }

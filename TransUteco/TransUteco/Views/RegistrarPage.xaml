@@ -23,25 +23,27 @@
                         <Label Text="Crea tu cuenta aqui." TextColor="#0088C1" HorizontalOptions="Center" FontSize="18" />
                       
                         <Label Text=""   x:Name="lblNombre"/>
-                        <Entry Placeholder="Nombre Completo" Style="{StaticResource Key=txtRegistrar} "  x:Name="txtnombre"  TextChanged="txtnombre_TextChanged" />
+                        <Entry Placeholder="{Binding PHNombre}" Style="{StaticResource Key=txtRegistrar} "  x:Name="txtnombre"  TextChanged="txtnombre_TextChanged" />
                        
-                        <Label Text=""  x:Name="lblNombreUser" />
-                        <Entry Placeholder="Nombre de usuario"  Style="{StaticResource Key=txtRegistrar} "   x:Name="txtNombreUsuario" TextChanged="txtNombreUsuario_TextChanged" />
-                       
+                        <Label Text=""  x:Name="lblSexo" />
+                       <!--<Entry Placeholder="Nombre de usuario"  Style="{StaticResource Key=txtRegistrar} "   x:Name="txtNombreUsuario" TextChanged="txtNombreUsuario_TextChanged" />-->
+                        <!--<Picker Title="Select a country" ItemsSource="{Binding LSexo}" SelectedItem="{Binding SelectedColorName, Mode=TwoWay}" />-->
+                        <Picker Title="{Binding PHSexo}"  ItemsSource="{Binding LSexo}" x:Name="Pikersexo" SelectedIndexChanged="Picker_SelectedIndexChanged" />
+
                         <Label Text="" x:Name="lblEmail" />
-                        <Entry Placeholder="E-mail"  Style="{StaticResource Key=txtRegistrar} " x:Name="txtEmail" TextChanged="txtEmail_TextChanged"/>
+                        <Entry Placeholder="{Binding PHEmail}"   Style="{StaticResource Key=txtRegistrar} " x:Name="txtEmail" TextChanged="txtEmail_TextChanged"/>
                        
                         <Label Text="" x:Name="lblContrasena" />
-                        <Entry Placeholder="Contraseña"  Style="{StaticResource Key=txtRegistrar} " IsPassword="True" x:Name="txtContrasena" TextChanged="txtContrasena_TextChanged" />
+                        <Entry Placeholder="{Binding PHClave}"  Style="{StaticResource Key=txtRegistrar} " IsPassword="True" x:Name="txtContrasena" TextChanged="txtContrasena_TextChanged" />
 
                         <Label Text="" x:Name="lblConfirmarContrasena" />
-                        <Entry Placeholder="Confirmar Contraseña"  Style="{StaticResource Key=txtRegistrar} "   IsPassword="True" x:Name="txtConfirmarcontrasena" TextChanged="txtConfirmarcontrasena_TextChanged" />
+                        <Entry Placeholder="{Binding PHConfirmeClave}"   Style="{StaticResource Key=txtRegistrar} "   IsPassword="True" x:Name="txtConfirmarcontrasena" TextChanged="txtConfirmarcontrasena_TextChanged" />
 
 
 
 
-                        <Button Text="Enviar registro" FontSize="18" HeightRequest="50" TextColor="White" BackgroundColor="#0088C1 " CornerRadius="10" />
-                        <Button Text="Click aqui si ya tienes cuenta" HorizontalOptions="Center" TextColor="Black" FontSize="13"  BackgroundColor="#00000000"
+                        <Button Text="{Binding TBotonEnviarRegistro}"  FontSize="18" HeightRequest="50" TextColor="White" BackgroundColor="#0088C1 " CornerRadius="10" />
+                        <Button Text="{Binding TBotonYaTengoCuenta}"  HorizontalOptions="Center" TextColor="Black" FontSize="13"  BackgroundColor="#00000000"
                        Margin="0,10,0,0" x:Name="btnLogin" Clicked="btnLogin_Clicked"/>
 
 
