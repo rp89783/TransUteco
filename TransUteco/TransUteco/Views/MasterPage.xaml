@@ -7,8 +7,9 @@
              xmlns:local="using:TransUteco.Clases"
              xmlns:Views="using:TransUteco.Views"
              xmlns:app="using:TransUteco"
-    x:Class="TransUteco.Views.MasterPage"
+                x:Class="TransUteco.Views.MasterPage"
              Title="Menu"
+             BindingContext="{Binding Main, Source={StaticResource Locator}}"
               
              >
     
@@ -28,24 +29,31 @@
 
             <Frame Grid.Row="1" BackgroundColor="White">
                 <StackLayout >
-                    <ListView  x:Name="listView" x:FieldModifier="public" >
-
-                        
+                    <ListView  ItemsSource="{Binding Menu}"
+                            HasUnevenRows="True">
                         <ListView.ItemTemplate>
                             <DataTemplate>
                                 <ViewCell>
-                                    
-                                        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand"  >
-                                            <Image Grid.Column="0" Source="{Binding Icon}" WidthRequest="30" HeightRequest="30"/>
-                                            <Label  Grid.Column="1"  Text="{Binding Title}" VerticalOptions="EndAndExpand" />
-                                            
-                                        </StackLayout>
-                                        
-                                  
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="Auto"></ColumnDefinition>
+                                            <ColumnDefinition Width="*"></ColumnDefinition>
+                                        </Grid.ColumnDefinitions>
+                                        <Image 
+                                          Source="{Binding Icon}"
+                                          WidthRequest="50"
+                                          HeightRequest="50"/>
+                                        <Label 
+                                          Grid.Column="1"
+                                          VerticalOptions="Center"
+                                          TextColor="Black"
+                                          Text="{Binding Title}"/>      
+                                    </Grid>
                                 </ViewCell>
                             </DataTemplate>
                         </ListView.ItemTemplate>
                     </ListView>
+
                     <Button Text="Cerrar Sesion" Image="Exit" x:Name="btnCerrarSesion" Clicked="btnCerrarSesion_Clicked" ContentLayout="Left,0"/>
                 </StackLayout>
                 

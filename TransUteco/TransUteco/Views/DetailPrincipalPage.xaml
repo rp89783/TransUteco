@@ -48,12 +48,13 @@
                         <Button Text="???" BackgroundColor="DarkBlue" Style="{StaticResource ButtonPagePrincipal}" Image="T"   Grid.Column="1" Grid.Row="3"/>
                     </Grid>-->
 
-                    <ListView  x:Name="Lista" HasUnevenRows="True">
+                    <ListView  x:Name="Lista"  RowHeight="140"  BackgroundColor="White">
                         <ListView.ItemTemplate>
                             <DataTemplate>
                                 
                                 <ViewCell >
-                                    <Frame BorderColor="Black" CornerRadius="3" Margin="2,2,2,2">
+                                    <StackLayout>
+                                    <Frame BorderColor="Black" CornerRadius="3" Margin="2,0,2,0" BackgroundColor="Transparent">
                                         <StackLayout Orientation="Vertical">
                                             <StackLayout Orientation="Horizontal">
                                                 <Image Source="{Binding Imagen}" WidthRequest="100" HorizontalOptions="Center"/>
@@ -66,14 +67,14 @@
                                             
                                         </StackLayout>
                                     </Frame>
-                                    
+                                    </StackLayout>
                                 </ViewCell>
                             </DataTemplate>
                         </ListView.ItemTemplate>
                     </ListView>
-                    
-                    
-                    
+
+
+                    <BoxView HeightRequest="50"/>
                 </StackLayout>
 
             </ContentView>

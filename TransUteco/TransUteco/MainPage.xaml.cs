@@ -16,18 +16,18 @@ namespace TransUteco
         public MainPage()
         {
             InitializeComponent();
-            masterPage.listView.ItemSelected += ListView_ItemSelected;
+         //   masterPage.listView.ItemSelected += ListView_ItemSelected;
         }
         private void ListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
-            var itemType = e.SelectedItem as Clases.MasterPageItem;
-            if (itemType != null)
-            {
-                var page = (Page)Activator.CreateInstance(itemType.TargetType);
-                Detail = new NavigationPage(page);
-                masterPage.listView.SelectedItem = null;
-                IsPresented = false;
-            }
+            //var itemType = e.SelectedItem as Clases.MasterPageItem;
+            //if (itemType != null)
+            //{
+            //    var page = (Page)Activator.CreateInstance(itemType.TargetType);
+            //    Detail = new NavigationPage(page);
+            //    masterPage.listView.SelectedItem = null;
+            //    IsPresented = false;
+            //}
         }
 
         public async void IrADetalle(object sender, EventArgs events)

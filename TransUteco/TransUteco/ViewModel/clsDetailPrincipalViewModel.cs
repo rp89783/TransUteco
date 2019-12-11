@@ -40,6 +40,12 @@ namespace TransUteco.ViewModel
                 Asociacion = "ASOEMA",
                 Ruta = "BATERO-PERALEJOS-COTUI"
             });
+            listas.Add(new Clases.clsDetailPrincipal()
+            {
+                Imagen = "B5.png",
+                Asociacion = "ASOEMA",
+                Ruta = "BATERO-PERALEJOS-COTUI"
+            });
             return listas;
         }
 

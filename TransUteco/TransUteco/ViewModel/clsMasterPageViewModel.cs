@@ -45,25 +45,33 @@ namespace TransUteco.ViewModel
                     );
                 Menu.Add(new MasterPageItem.Menu
                 {
-                    Icon = "",
+                    Icon = "Inicio.png",
                     Title = "Home",
                     PageName = "Views.DetailPrincipalPage"
                 }
                     );
                 Menu.Add(new MasterPageItem.Menu
                 {
-                    Icon = "",
-                    Title = "Home",
+                    Icon = "Asoc.png",
+                    Title = "Transporte",
                     PageName = "Views.DetailPrincipalPage"
                 }
                     );
                 Menu.Add(new MasterPageItem.Menu
                 {
-                    Icon = "",
-                    Title = "Home",
+                    Icon = "Config.png",
+                    Title = "Configuracion",
                     PageName = "Views.DetailPrincipalPage"
                 }
                     );
+                Menu.Add(new MasterPageItem.Menu
+                {
+                    Icon = "Ayuda.png",
+                    Title = "Ayuda",
+                    PageName = "Views.DetailPrincipalPage"
+                }
+                    );
+
             }
             #endregion
 
