@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using TransUteco.ViewModel;
+using System.Collections.ObjectModel;
 
 namespace TransUteco.Views
 {
@@ -16,7 +17,13 @@ namespace TransUteco.Views
        
         public DetailPrincipalPage()
         {
-            InitializeComponent();          
+            InitializeComponent();
+
+            ObservableCollection<Clases.clsDetailPrincipal> listas = new ObservableCollection<Clases.clsDetailPrincipal>(new clsDetailPrincipalViewModel().Consultarlistas());
+            Lista.ItemsSource = listas;
+            
+            //BindingContext = new clsDetailPrincipalViewModel();
+            
         }
 
        

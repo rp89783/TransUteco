@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Foundation;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Text;
@@ -23,6 +24,9 @@ namespace TransUteco.ViewModel
             public string SwichRecordar { get; set; } = clsConstantes.SwichRecordar;
 
             private string email;
+            
+            //String a= NSUserDefaults.StandardUserDefaults.StringForKey("txtNombreUsuario");
+         
 
             public string Email
             {
@@ -71,23 +75,35 @@ namespace TransUteco.ViewModel
                     return;
                 }
 
-                var response = await webService.Login(new LoginRequest()
-                {
-                    email = Email,
-                    password = clave
-                });
+                //var response = await webService.Login(new LoginRequest()
+                //{
+                //    email = Email,
+                //    password = clave
+                //});
 
-                if (response == null)
-                {
-                    await Application.Current.MainPage.DisplayAlert("Error", "Ocurrio un error durante el login", "Ok");
-                    return;
-                }
+                //if (response == null)
+                //{
+                //    await Application.Current.MainPage.DisplayAlert("Error", "Ocurrio un error durante el login", "Ok");
+                //    return;
+                //}
 
-                await Application.Current.MainPage
-                .Navigation
-                .PushModalAsync(new NavigationPage(new MainPage()));
+                //if(Email=="a" && Clave=="1")
+                //{
+
+                //}
+
+                //MasterPageItem.DatosUsuario.Nombre = Email;
+
+
+                //NSUserDefaults.StandardUserDefaults.SetString(Email, "txtNombreUsuario");
+                //var a = NSUserDefaults.StandardUserDefaults.StringForKey("txtNombreUsuario");
+
+
+                //await Application.Current.MainPage
+                //.Navigation
+                //.PushModalAsync(new NavigationPage(new MainPage()));
                 
-                //Application.Current.MainPage = new MainPage();
+                Application.Current.MainPage = new MainPage();
 
 
                     

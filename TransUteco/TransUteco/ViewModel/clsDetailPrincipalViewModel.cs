@@ -1,35 +1,61 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using TransUteco.Clases;
 
 namespace TransUteco.ViewModel
 {
   public  class clsDetailPrincipalViewModel
     {
-        public static List<ListaAsociaciones> listas=new List<ListaAsociaciones>() ;
+        public  List<Clases.clsDetailPrincipal> Consultarlistas ()
         
-        void CargarLista()
-        {
-
-            listas.Add(new ListaAsociaciones("Registrar.png", "ASOEBA", "BATERO-PERALEJOS-COTUI"));
-        
-        }
-       public  class ListaAsociaciones
-        {
-            public string Imagen { get; set; }
-            public string Asociacion { get; set; }
-            public string Ruta { get; set; }
-
-
-            public ListaAsociaciones(string imagen, string asociacion, string ruta)
+        { var listas = new List<clsDetailPrincipal>();
+            
+            listas.Add(new Clases.clsDetailPrincipal()
+            {   Imagen = "TP.png",
+                Asociacion= "ASOEBA",
+                Ruta= "BATERO-PERALEJOS-COTUI" 
+            });
+            listas.Add(new Clases.clsDetailPrincipal()
             {
-                Imagen = imagen;
-                Asociacion = asociacion;
-                Ruta = ruta;
-            }
+                Imagen = "Registrarse.png",
+                Asociacion = "ASOEBA",
+                Ruta = "BATERO-PERALEJOS-COTUI"
+            });
+            listas.Add(new Clases.clsDetailPrincipal()
+            {
+                Imagen = "Registrarse.png",
+                Asociacion = "ASOEBA",
+                Ruta = "BATERO-PERALEJOS-COTUI"
+            });
+            listas.Add(new Clases.clsDetailPrincipal()
+            {
+                Imagen = "Registrarse.png",
+                Asociacion = "ASOEBA",
+                Ruta = "BATERO-PERALEJOS-COTUI"
+            });
+            return listas;
         }
 
 
+
+
+        //public class ListaAsociaciones
+        //{
+        //    public string Imagen { get; set; }
+        //    public string Asociacion { get; set; }
+        //    public string Ruta { get; set; }
+
+
+        //    public ListaAsociaciones(string imagen, string asociacion, string ruta)
+        //    {
+        //        Imagen = imagen;
+        //        Asociacion = asociacion;
+        //        Ruta = ruta;
+        //    }
+        //}
+
+        
     }
     
 }
