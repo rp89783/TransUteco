@@ -53,11 +53,15 @@
                             <DataTemplate>
                                 
                                 <ViewCell >
-                                    <Frame BorderColor="Black" CornerRadius="3" Margin="2,0,2,2">
+                                    <Frame BorderColor="Black" CornerRadius="3" Margin="2,2,2,2">
                                         <StackLayout Orientation="Vertical">
-                                            <Image Source="{Binding Imagen}" WidthRequest="100" HorizontalOptions="Center"/>
+                                            <StackLayout Orientation="Horizontal">
+                                                <Image Source="{Binding Imagen}" WidthRequest="100" HorizontalOptions="Center"/>
 
-                                            <Label Text="{Binding Asociacion}"></Label>
+                                                <Label Text="{Binding Asociacion}" HorizontalOptions="CenterAndExpand"></Label>
+
+                                            </StackLayout>
+                                            <BoxView HeightRequest="1" ></BoxView>
                                             <Label Text="{Binding Ruta}"></Label>
                                             
                                         </StackLayout>

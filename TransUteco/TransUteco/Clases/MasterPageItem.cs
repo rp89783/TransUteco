@@ -15,16 +15,17 @@ namespace TransUteco.Clases
             public static string IconUser { get => iconUser; set => iconUser = value; }
             public static string Nombre { get => nombre; set => nombre = value; }
         }
-       
-        
-       
 
-        #region Menu
-        public string Title { get; set; }
-        public string Icon { get; set; }
-        public Type TargetType { get; set; }
-        #endregion
 
+
+        public class Menu
+        {
+            #region Menu
+            public string Title { get; set; }
+            public string Icon { get; set; }
+            public string PageName { get; set; }
+            #endregion
+        }
 
 
     }

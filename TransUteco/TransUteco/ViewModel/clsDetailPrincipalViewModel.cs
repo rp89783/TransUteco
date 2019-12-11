@@ -12,26 +12,32 @@ namespace TransUteco.ViewModel
         { var listas = new List<clsDetailPrincipal>();
             
             listas.Add(new Clases.clsDetailPrincipal()
-            {   Imagen = "TP.png",
+            {   Imagen = "B1.png",
                 Asociacion= "ASOEBA",
                 Ruta= "BATERO-PERALEJOS-COTUI" 
             });
             listas.Add(new Clases.clsDetailPrincipal()
             {
-                Imagen = "Registrarse.png",
-                Asociacion = "ASOEBA",
+                Imagen = "B2.png",
+                Asociacion = "ASOESA",
                 Ruta = "BATERO-PERALEJOS-COTUI"
             });
             listas.Add(new Clases.clsDetailPrincipal()
             {
-                Imagen = "Registrarse.png",
-                Asociacion = "ASOEBA",
+                Imagen = "B3.png",
+                Asociacion = "ASOECU",
                 Ruta = "BATERO-PERALEJOS-COTUI"
             });
             listas.Add(new Clases.clsDetailPrincipal()
             {
-                Imagen = "Registrarse.png",
-                Asociacion = "ASOEBA",
+                Imagen = "B4.png",
+                Asociacion = "ASOEPI",
+                Ruta = "BATERO-PERALEJOS-COTUI"
+            });
+            listas.Add(new Clases.clsDetailPrincipal()
+            {
+                Imagen = "B5.png",
+                Asociacion = "ASOEMA",
                 Ruta = "BATERO-PERALEJOS-COTUI"
             });
             return listas;

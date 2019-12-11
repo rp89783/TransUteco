@@ -30,14 +30,7 @@
                 <StackLayout >
                     <ListView  x:Name="listView" x:FieldModifier="public" >
 
-                        <ListView.ItemsSource>
-                            <x:Array Type="{x:Type local:MasterPageItem}">
-                                <local:MasterPageItem  Title="Transportes" Icon="ic_launcher.png" TargetType="{x:Type Views:DetailPrincipalPage}" />
-                                <local:MasterPageItem Title="Ajustes"  Icon="icon.png" TargetType="{x:Type Views:AjustesPage}" />
-                                <local:MasterPageItem Title="Ayuda" Icon="icon.png" TargetType="{x:Type Views:AyudaPage}" />
-                                <!--<local:MasterPageItem Title="Cerrar Sesion" Icon="icon.png" TargetType="{x:Type Views:LoginPage}" />-->
-                            </x:Array>
-                        </ListView.ItemsSource>
+                        
                         <ListView.ItemTemplate>
                             <DataTemplate>
                                 <ViewCell>

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Text;
 using TransUteco.Clases;
 
@@ -19,6 +20,80 @@ namespace TransUteco.ViewModel
                 get { return iconUser; }
                 set { iconUser = value; }
             }
+
+            #region Propirty
+
+            public ObservableCollection<MasterPageItem.Menu> Menu { get; set; }
+
+
+            #endregion
+            #region Contructor
+            public MasterPageViewModel()
+            {
+                Menu = new ObservableCollection<MasterPageItem.Menu>();
+            
+            }
+            #endregion
+
+            #region Metodos
+            public void LoadMenu()
+            {
+                Menu.Add(new MasterPageItem.Menu
+                { Icon="",
+                Title="Home",
+                PageName="Views.DetailPrincipalPage"}
+                    );
+                Menu.Add(new MasterPageItem.Menu
+                {
+                    Icon = "",
+                    Title = "Home",
+                    PageName = "Views.DetailPrincipalPage"
+                }
+                    );
+                Menu.Add(new MasterPageItem.Menu
+                {
+                    Icon = "",
+                    Title = "Home",
+                    PageName = "Views.DetailPrincipalPage"
+                }
+                    );
+                Menu.Add(new MasterPageItem.Menu
+                {
+                    Icon = "",
+                    Title = "Home",
+                    PageName = "Views.DetailPrincipalPage"
+                }
+                    );
+            }
+            #endregion
+
+
+
+
+
+
+
+
+            //public List<MasterPageItem.Menu> Item()
+
+            //{
+            //    var list = new List<MasterPageItem.Menu>();
+
+            //    list.Add(new MasterPageItem.Menu()
+            //    {
+            //        Icon = "B1.png",
+            //        Title = "ASOEBA",
+
+            //    });
+            //}
+            //< ListView.ItemsSource>
+            //                <x:Array Type = "{x:Type local:MasterPageItem}" >
+            //                    < local:MasterPageItem Title = "Transportes" Icon="ic_launcher.png" TargetType="{x:Type Views:DetailPrincipalPage}" />
+            //                    <local:MasterPageItem Title = "Ajustes"  Icon="icon.png" TargetType="{x:Type Views:AjustesPage}" />
+            //                    <local:MasterPageItem Title = "Ayuda" Icon="icon.png" TargetType="{x:Type Views:AyudaPage}" />
+            //                    <!--<local:MasterPageItem Title = "Cerrar Sesion" Icon="icon.png" TargetType="{x:Type Views:LoginPage}" />-->
+            //                </x:Array>
+            //            </ListView.ItemsSource>
         }
     }
 }
