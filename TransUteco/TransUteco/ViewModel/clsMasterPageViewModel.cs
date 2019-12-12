@@ -21,9 +21,7 @@ namespace TransUteco.ViewModel
                 set { iconUser = value; }
             }
 
-           
-           
-
+          
 
 
 
@@ -53,18 +51,13 @@ namespace TransUteco.ViewModel
             //            </ListView.ItemsSource>
         }
 
+
         public List<MasterPageItem.Menu> ConsultarMenu()
 
         {
             var Menu = new List<MasterPageItem.Menu>();
 
-            Menu.Add(new MasterPageItem.Menu
-            {
-                Icon = "",
-                Title = "Home",
-                PageName = "Views.DetailPrincipalPage"
-            }
-                );
+           
             Menu.Add(new MasterPageItem.Menu
             {
                 Icon = "Inicio.png",
