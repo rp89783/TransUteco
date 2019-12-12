@@ -9,6 +9,7 @@
              xmlns:app="using:TransUteco"
                 x:Class="TransUteco.Views.MasterPage"
              Title="Menu"
+             BindingContext="{Binding Main, Source={StaticResource Locator}}"
               
              >
     
@@ -28,7 +29,7 @@
 
             <Frame Grid.Row="1" BackgroundColor="White">
                 <StackLayout >
-                    <ListView  x:Name="Menu"
+                    <ListView  ItemsSource="{Binding Menu}"
                             HasUnevenRows="True">
                         <ListView.ItemTemplate>
                             <DataTemplate>

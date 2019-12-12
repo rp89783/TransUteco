@@ -16,9 +16,9 @@ namespace TransUteco.Views
         public MasterPage()
         {
             InitializeComponent();
-            ObservableCollection<Clases.MasterPageItem.Menu> listas = new ObservableCollection<Clases.MasterPageItem.Menu>(new clsMasterPageViewModel().ConsultarMenu());
-            Menu.ItemsSource = listas;
-            BindingContext = new clsMasterPageViewModel.MasterPageViewModel();
+          //  ObservableCollection<Clases.MasterPageItem> listas = new ObservableCollection<Clases.MasterPageItem>(new clsMasterPageViewModel().());
+           // Lista.ItemsSource = listas;
+          //  BindingContext = new clsMasterPageViewModel.MasterPageViewModel();
         }
 
         private void btnCerrarSesion_Clicked(object sender, EventArgs e)
