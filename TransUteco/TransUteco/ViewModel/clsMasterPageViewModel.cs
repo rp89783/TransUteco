@@ -21,59 +21,8 @@ namespace TransUteco.ViewModel
                 set { iconUser = value; }
             }
 
-            #region Propirty
-
-            public ObservableCollection<MasterPageItem.Menu> Menu { get; set; }
-
-
-            #endregion
-            #region Contructor
-            public MasterPageViewModel()
-            {
-                Menu = new ObservableCollection<MasterPageItem.Menu>();
-            
-            }
-            #endregion
-
-            #region Metodos
-            public void LoadMenu()
-            {
-                Menu.Add(new MasterPageItem.Menu
-                { Icon="",
-                Title="Home",
-                PageName="Views.DetailPrincipalPage"}
-                    );
-                Menu.Add(new MasterPageItem.Menu
-                {
-                    Icon = "Inicio.png",
-                    Title = "Home",
-                    PageName = "Views.DetailPrincipalPage"
-                }
-                    );
-                Menu.Add(new MasterPageItem.Menu
-                {
-                    Icon = "Asoc.png",
-                    Title = "Transporte",
-                    PageName = "Views.DetailPrincipalPage"
-                }
-                    );
-                Menu.Add(new MasterPageItem.Menu
-                {
-                    Icon = "Config.png",
-                    Title = "Configuracion",
-                    PageName = "Views.DetailPrincipalPage"
-                }
-                    );
-                Menu.Add(new MasterPageItem.Menu
-                {
-                    Icon = "Ayuda.png",
-                    Title = "Ayuda",
-                    PageName = "Views.DetailPrincipalPage"
-                }
-                    );
-
-            }
-            #endregion
+           
+           
 
 
 
@@ -102,6 +51,50 @@ namespace TransUteco.ViewModel
             //                    <!--<local:MasterPageItem Title = "Cerrar Sesion" Icon="icon.png" TargetType="{x:Type Views:LoginPage}" />-->
             //                </x:Array>
             //            </ListView.ItemsSource>
+        }
+
+        public List<MasterPageItem.Menu> ConsultarMenu()
+
+        {
+            var Menu = new List<MasterPageItem.Menu>();
+
+            Menu.Add(new MasterPageItem.Menu
+            {
+                Icon = "",
+                Title = "Home",
+                PageName = "Views.DetailPrincipalPage"
+            }
+                );
+            Menu.Add(new MasterPageItem.Menu
+            {
+                Icon = "Inicio.png",
+                Title = "Home",
+                PageName = "Views.DetailPrincipalPage"
+            }
+                );
+            Menu.Add(new MasterPageItem.Menu
+            {
+                Icon = "Asoc.png",
+                Title = "Transporte",
+                PageName = "Views.DetailPrincipalPage"
+            }
+                );
+            Menu.Add(new MasterPageItem.Menu
+            {
+                Icon = "Config.png",
+                Title = "Configuracion",
+                PageName = "Views.DetailPrincipalPage"
+            }
+                );
+            Menu.Add(new MasterPageItem.Menu
+            {
+                Icon = "Ayuda.png",
+                Title = "Ayuda",
+                PageName = "Views.DetailPrincipalPage"
+            }
+                );
+            return Menu;
+
         }
     }
 }
