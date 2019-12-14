@@ -48,7 +48,7 @@
                         <Button Text="???" BackgroundColor="DarkBlue" Style="{StaticResource ButtonPagePrincipal}" Image="T"   Grid.Column="1" Grid.Row="3"/>
                     </Grid>-->
 
-                    <ListView  x:Name="Lista"  RowHeight="140"  BackgroundColor="White">
+                    <ListView  x:Name="Lista"  RowHeight="140"  BackgroundColor="White" ItemSelected="Lista_ItemSelected" >
                         <ListView.ItemTemplate>
                             <DataTemplate>
                                 

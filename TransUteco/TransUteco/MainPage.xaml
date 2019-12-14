@@ -10,15 +10,55 @@
              x:Class="TransUteco.MainPage">
 
     <MasterDetailPage.Master>
-        <Views:MasterPage x:Name="masterPage" />
+        <ContentPage Title="Menu" BackgroundColor="#e8e8e8">
+            <Grid  >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="*" />
+
+                </Grid.RowDefinitions>
+                <StackLayout Grid.Row="0" BackgroundColor="#0099CC" >
+                    <Image Source="Registrarse.png" HorizontalOptions="Start" WidthRequest="50" HeightRequest="50" Margin="5,40,0,0"/>
+                    <Label Text="{Binding Nombre}" FontSize="20" TextColor="White" FontAttributes="Bold" Margin="3,0,0,0"/>
+
+                </StackLayout>
+
+                <Frame Grid.Row="1" BackgroundColor="White">
+                    <StackLayout >
+                        <ListView  x:Name="Menu" HasUnevenRows="True" ItemSelected="OnMenuItemSelected">
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <ViewCell>
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="Auto"></ColumnDefinition>
+                                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                            </Grid.ColumnDefinitions>
+                                            <Image 
+                                          Source="{Binding Icon}"
+                                          WidthRequest="50"
+                                          HeightRequest="50"/>
+                                            <Label 
+                                          Grid.Column="1"
+                                          VerticalOptions="Center"
+                                          TextColor="Black"
+                                          Text="{Binding Title}" />
+                                        </Grid>
+                                    </ViewCell>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+
+                        <Button Text="Cerrar Sesion" Image="Exit" x:Name="btnCerrarSesion"  ContentLayout="Left,0"/>
+                    </StackLayout>
+
+                </Frame>
+
+            </Grid>
+        </ContentPage>
     </MasterDetailPage.Master>
     <MasterDetailPage.Detail>
         <NavigationPage>
-            <x:Arguments>
-                <Views:DetailPrincipalPage />
-                
-            </x:Arguments>
         </NavigationPage>
     </MasterDetailPage.Detail>
-
 </MasterDetailPage>

@@ -17,6 +17,7 @@ namespace TransUteco.Views
         public AsociacionPage()
         {
             InitializeComponent();
+
             Cargar();
         }
 

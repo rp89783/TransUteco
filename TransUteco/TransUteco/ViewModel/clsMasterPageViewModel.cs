@@ -62,28 +62,28 @@ namespace TransUteco.ViewModel
             {
                 Icon = "Inicio.png",
                 Title = "Home",
-                PageName = "Views.DetailPrincipalPage"
+                PageName = typeof (Views.DetailPrincipalPage)
             }
                 );
             Menu.Add(new MasterPageItem.Menu
             {
                 Icon = "Asoc.png",
                 Title = "Transporte",
-                PageName = "Views.DetailPrincipalPage"
+                PageName = typeof(Views.DetailPrincipalPage)
             }
                 );
             Menu.Add(new MasterPageItem.Menu
             {
                 Icon = "Config.png",
                 Title = "Configuracion",
-                PageName = "Views.DetailPrincipalPage"
+                PageName = typeof(Views.AjustesPage)
             }
                 );
             Menu.Add(new MasterPageItem.Menu
             {
                 Icon = "Ayuda.png",
                 Title = "Ayuda",
-                PageName = "Views.DetailPrincipalPage"
+                PageName = typeof(Views.AyudaPage)
             }
                 );
             return Menu;

@@ -8,6 +8,7 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using TransUteco.ViewModel;
 using System.Collections.ObjectModel;
+using TransUteco.Clases;
 
 namespace TransUteco.Views
 {
@@ -21,9 +22,14 @@ namespace TransUteco.Views
 
             ObservableCollection<Clases.clsDetailPrincipal> listas = new ObservableCollection<Clases.clsDetailPrincipal>(new clsDetailPrincipalViewModel().Consultarlistas());
             Lista.ItemsSource = listas;
-            
+
             //BindingContext = new clsDetailPrincipalViewModel();
+       //Menu.ItemSelected += ListView_ItemSelected;
+        }
+        private void ListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
             
+        
         }
 
        
@@ -31,5 +37,17 @@ namespace TransUteco.Views
         {
             await Navigation.PushAsync(new AsociacionPage());
         }
+
+        private void Lista_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+            
+                var item = (MasterPageItem.Menu)e.SelectedItem;
+                Type page = item.PageName;
+                clsAsociacion a = new clsAsociacion();
+            a.Asociacion1 = item.Title;
+           Application.Current.MainPage = new AsociacionPage();
+            
+        
+         }
     }
 }

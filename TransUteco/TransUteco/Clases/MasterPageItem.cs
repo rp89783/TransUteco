@@ -23,7 +23,7 @@ namespace TransUteco.Clases
             #region Menu
             public string Title { get; set; }
             public string Icon { get; set; }
-            public string PageName { get; set; }
+            public Type PageName { get; set; }
             #endregion
         }
 
