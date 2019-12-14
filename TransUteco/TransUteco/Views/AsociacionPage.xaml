@@ -9,28 +9,33 @@
     <ContentPage.Content>
         <ScrollView>
             <StackLayout>
-                <Label Text="Asociacion ????"
+                <Label Text="{Binding Asociacion}"
                     VerticalOptions="Start" 
                     HorizontalOptions="CenterAndExpand" x:Name="lblNombreAsociacion" TextColor="Black" />
-                <Image Source="TP.png" WidthRequest="100" HorizontalOptions="Center"/>
+                <Image Source="{Binding Imagen}" WidthRequest="200" HorizontalOptions="Center"/>
 
-                <Label Text="Rutas de hoy"/>
-                <ListView x:Name="listRutas">
-                    <ListView.ItemTemplate>
-                        <DataTemplate>
-                            <ViewCell>
-                                <StackLayout Orientation="Horizontal" HorizontalOptions="Start">
-                                    <Label Text="{Binding IdRuta}"/>
-                                    <Label Text="{Binding Ruta}"/>
-                                    <Label Text="{Binding Chofer}"/>
-                                    <Label Text="{Binding Hora}"/>
-                                  
-                                </StackLayout>
-                            </ViewCell>
-                        </DataTemplate>
-                    </ListView.ItemTemplate>
-                </ListView>
+                <Label Text="{Binding Descripcion}"/>
+                <Grid>
+                    
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="150"></RowDefinition>
+                        <RowDefinition Height="150"></RowDefinition>
+                    </Grid.RowDefinitions>
+
+                    <Button Image="mapa.png" Grid.Row="0" Grid.Column="0" Text="Rutas hoy"/>
+                    <Button Image="gps.png" Grid.Row="0" Grid.Column="1" Text="Rutas Semana"/>
+                    <Button Image="conductor.png" Grid.Row="1" Grid.Column="0" Text="Choferes"/>
+                    <Button Image="contacto.png" Grid.Row="1" Grid.Column="1" Text="Contactos"/>
+                </Grid>
+               
+
+               
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>
+    
 </ContentPage>

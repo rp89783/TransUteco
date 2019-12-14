@@ -92,7 +92,7 @@ namespace TransUteco.ViewModel
 
                 //}
 
-                //MasterPageItem.DatosUsuario.Nombre = Email;
+                MasterPageItem.DatosUsuario.Nombre = Email;
 
 
                 //NSUserDefaults.StandardUserDefaults.SetString(Email, "txtNombreUsuario");

@@ -49,7 +49,7 @@ namespace TransUteco
             var item = (MasterPageItem.Menu)e.SelectedItem;
             Type page = item.PageName;
             clsAsociacion a = new clsAsociacion();
-            a.Asociacion1= item.Title:
+            a.Asociacion1 = item.Title;
             Detail = new NavigationPage((Page)Activator.CreateInstance(page));
             IsPresented = false;
         }

@@ -38,16 +38,19 @@ namespace TransUteco.Views
             await Navigation.PushAsync(new AsociacionPage());
         }
 
-        private void Lista_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        private async void Lista_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
             
-                var item = (MasterPageItem.Menu)e.SelectedItem;
-                Type page = item.PageName;
+                var item = (clsDetailPrincipal)e.SelectedItem;
+                
                 clsAsociacion a = new clsAsociacion();
-            a.Asociacion1 = item.Title;
-           Application.Current.MainPage = new AsociacionPage();
-            
-        
-         }
+            a.Asociacion1 = item.Asociacion;
+            a.Decripcion1 = item.Decripcion;
+            a.Imagen1 = item.Imagen;
+            await Navigation.PushAsync(new AsociacionPage());
+            // Application.Current.MainPage = new AsociacionPage();
+
+
+        }
     }
 }

@@ -8,6 +8,7 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 using TransUteco.Clases;
+using TransUteco.ViewModel;
 
 namespace TransUteco.Views
 {
@@ -17,28 +18,10 @@ namespace TransUteco.Views
         public AsociacionPage()
         {
             InitializeComponent();
-
-            Cargar();
+            BindingContext = new clsAsociacionViewModel();
+           
         }
 
-        private async void Cargar()
-        {
-            try
-            {
-                clsRutasManager manager = new clsRutasManager();
-                var res = await manager.getRuta();
-
-                if (res != null)
-                {
-                    listRutas.ItemsSource = res; 
-                }
-            }
-            catch (Exception)
-            {
-
-                throw;
-            }
-        
-        }
+       
     }
 }

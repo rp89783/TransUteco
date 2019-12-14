@@ -4,7 +4,13 @@ using System.Text;
 
 namespace TransUteco.ViewModel
 {
-    class clsAsociacionViewModel
-    { public string Asociacion { get; set; }=clsAsociacion.
+  public  class clsAsociacionViewModel
+    {
+        clsAsociacion a = new clsAsociacion();
+        public string Asociacion { get; set; } ="Asociacion  " + clsAsociacion.Asociacion;
+        public string Descripcion { get; set; }= clsAsociacion.Decripcion;
+        public string Imagen { get; set; } = clsAsociacion.Imagen;
+
+
     }
 }
